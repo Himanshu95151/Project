@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shop - Fashion Feast</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Fashion Feast Logo">
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </header>
+
+    <div class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="shirt.png" alt="Cozy Stylist Shirt">
+                <h3>Cozy Stylist Shirt</h3>
+                <p>Price: $30</p>
+                <button class="add-to-cart" onclick="addToCart({name: 'Cozy Stylist Shirt', image: 'shirt.png', price: 30})">Add to Cart</button>
+                <button class="try-on" onclick="tryOn('Cozy Stylist Shirt')">Try On</button>
+            </div>
+            <div class="product">
+                <img src="T-shirt3.png" alt="Trendy T-Shirt">
+                <h3>Trendy T-Shirt</h3>
+                <p>Price: $40</p>
+                <button class="add-to-cart" onclick="addToCart({name: 'Trendy T-Shirt', image: 'T-shirt3.png', price: 40})">Add to Cart</button>
+                <button class="try-on" onclick="tryOn('Trendy T-Shirt')">Try On</button>
+            </div>
+            <div class="product">
+                <img src="tshirt1.png" alt="Roadster">
+                <h3>Roadster</h3>
+                <p>Price: $25</p>
+                <button class="add-to-cart" onclick="addToCart({name: 'Roadster', image: 'tshirt1.png', price: 25})">Add to Cart</button>
+                <button class="try-on" onclick="tryOn('Roadster')">Try On</button>
+            </div>
+            <div class="product">
+                <img src="tshirt.png" alt="H&M">
+                <h3>H&M</h3>
+                <p>Price: $20</p>
+                <button class="add-to-cart" onclick="addToCart({name: 'H&M', image: 'tshirt.png', price: 20})">Add to Cart</button>
+                <button class="try-on" onclick="tryOn('H&M')">Try On</button>
+            </div>
+            <div class="product">
+                <img src="ajio.png" alt="VIP">
+                <h3>VIP</h3>
+                <p>Price: $20</p>
+                <button class="add-to-cart" onclick="addToCart({name: 'VIP', image: 'tshirt.png', price: 20})">Add to Cart</button>
+                <button class="try-on" onclick="tryOn('VIP')">Try On</button>
+            </div>
+            <div class="product">
+                <img src="myntra.png" alt="Campus">
+                <h3>Campus</h3>
+                <p>Price: $20</p>
+                <button class="add-to-cart" onclick="addToCart({name: 'Campus', image: 'tshirt.png', price: 20})">Add to Cart</button>
+                <button class="try-on" onclick="tryOn('Campus')">Try On</button>
+            </div>
+            <div class="product">
+                <img src="myntra1.png" alt="Garage GO">
+                <h3>Garage GO</h3>
+                <p>Price: $20</p>
+                <button class="add-to-cart" onclick="addToCart({name: 'Garage GO', image: 'tshirt.png', price: 20})">Add to Cart</button>
+                <button class="try-on" onclick="tryOn('Garage GO')">Try On</button>
+            </div>
+            <div class="product">
+                <img src="google.png" alt="Flipkart">
+                <h3>Flipkart</h3>
+                <p>Price: $20</p>
+                <button class="add-to-cart" onclick="addToCart({name: 'Flipkart', image: 'tshirt.png', price: 20})">Add to Cart</button>
+                <button class="try-on" onclick="tryOn('Flipkart')">Try On</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Fashion Feast. All Rights Reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        function tryOn(productName) {
+            alert(`Activating Try On feature for ${productName}!`);
+            // In the future, replace this alert with AR or virtual try-on functionality
+        }
+    </script>
+</body>
+</html>

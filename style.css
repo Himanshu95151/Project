@@ -1,0 +1,314 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Light background for overall page */
+    color: #333; /* Dark text color */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00274d; /* Navy Blue for header */
+    color: white; /* White text in header */
+}
+
+.logo img {
+    width: 80px; /* Logo size */
+}
+
+.search-container {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center; /* Centering search bar */
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 25px; /* Cylindrical format */
+    width: 250px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white; /* White text color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-image: url('bg1.png'); /* Add your image path here */
+    background-size: cover; /* Cover the entire hero section */
+    background-position: center; /* Center the background image */
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    height: 250px; /* Adjust the height as needed */
+    overflow: hidden; 
+    position: relative; 
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Other styles remain unchanged */
+
+.hero-content {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center content vertically */
+    padding: 20px; /* Add some padding */
+    color: white; /* Change text color if needed */
+    z-index: 1; /* Ensure content is above images */
+}
+
+.hero-images {
+    position: relative; 
+    overflow: hidden; 
+}
+
+.hero-image {
+    position: absolute; 
+    top: 0;
+    right: 0; /* Align images to the right */
+    width: 100%; 
+    height: 100%; /* Make images cover the hero section */
+    object-fit: cover; 
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+}
+
+.hero-image.active {
+    opacity: 1; /* Show the active image */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero .highlight {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffff00; /* Highlight color */
+}
+/* Remove underline from hero section */
+.hero h1,
+.hero .highlight {
+    text-decoration: none; /* Ensure text decoration is set to none */
+}
+
+.hero-content h1, 
+.hero-content p {
+    text-decoration: none !important; /* Strongly enforce no underline */
+}
+
+.hero a {
+    text-decoration: none !important; /* Remove underline from anchor tags */
+}
+
+/* Ensure anchor tags in hero section do not show underlines */
+.hero-link {
+    text-decoration: none; /* Remove underline from the entire link */
+}
+
+.hero-link:hover h1,
+.hero-link:hover .highlight {
+    text-decoration: none !important; /* Ensure no underline on hover as well */
+}
+
+/* Products Section Styles */
+.products {
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+.product {
+    background-color: white; /* White background for product cards */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s; /* Smooth shadow effect on hover */
+}
+
+.product:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.product img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    background-color: #ffcc00; /* Button color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-to-cart:hover {
+    background-color: #e6b800; /* Darker button color on hover */
+}
+
+/* Add to Cart and Try On buttons */
+.add-to-cart,
+.try-on {
+    background-color: #ffcc00; /* Button color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px; /* Space between buttons */
+}
+
+.add-to-cart:hover,
+.try-on:hover {
+    background-color: #e6b800; /* Darker button color on hover */
+}
+
+/* Button grid container */
+.button-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Space above buttons */
+}
+
+/* Cart Section Styles */
+.cart {
+    padding: 20px;
+}
+
+#cartItems {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between items */
+    margin: 20px 0;
+}
+
+.cart-item {
+    background-color: white; /* White background for cart items */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px;
+    flex: 1 0 200px; /* Flex property to control size */
+    display: flex; /* Use flexbox for inner content */
+    align-items: center; /* Center items vertically */
+}
+
+.cart-item img {
+    width: 80px; /* Fixed image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.cart-item-details {
+    flex-grow: 1; /* Allow details to take remaining space */
+}
+
+.remove-from-cart {
+    background-color: #ffcc00; /* Button color */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.remove-from-cart:hover {
+    background-color: #e6b800; /* Darker button color on hover */
+}
+
+#cartItems {
+    margin: 20px 0;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00274d; /* Navy Blue for footer */
+    color: white; /* White text in footer */
+}
+
+/* Help Section Styles */
+.help {
+    padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) { /* Tablets and large phones */
+    .hero h1 {
+        font-size: 2em; /* Smaller font size for h1 */
+    }
+    .hero .highlight {
+        font-size: 1.2em; /* Smaller font size for highlights */
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for products */
+    }
+    .nav-links {
+        flex-direction: column; /* Stack navigation links on smaller screens */
+        align-items: flex-start; /* Align to left */
+    }
+    .nav-links li {
+        margin-bottom: 10px; /* Spacing between links */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile phones */
+    .hero h1 {
+        font-size: 1.5em; /* Even smaller font size for h1 */
+    }
+    .hero .highlight {
+        font-size: 1em; /* Even smaller font size for highlights */
+    }
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column for products */
+    }
+    .search-bar {
+        width: 100%; /* Full width for search bar */
+        margin: 0; /* Reset margin */
+    }
+    
+    .product img {
+        max-width: 100%; /* Ensure images fill their containers */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .cart-item img {
+        width: 100%; /* Full width for images in cart */
+        max-width: 80px; /* Set a max-width for cart images */
+    }
+}
+s
